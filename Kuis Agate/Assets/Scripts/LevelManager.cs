@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [System.Serializable]
-
-    private struct DataSoal
-    {
-        public Sprite hint;
-        public string pertanyaan;
-        public string judulLevel;
-
-        public string[] jawabanTeks;
-        public bool[] adalahBenar;
-    }
-
-    [SerializeField] private DataSoal[] _soalSoal = new DataSoal[0];
+    [SerializeField] private LevelPackKuis _soalSoal = null;
+    [SerializeField] private PlayerProgress _playerProgress = null;
     [SerializeField] private UI_Pertanyaan _tempatPertanyaan = null;
     [SerializeField] private UI_PoinJawaban[] _tempatPilihanJawaban = new UI_PoinJawaban[0];
+    
     private int _indexSoal = -1;
 
     private void Start()
     {
+        if (!_playerProgress.MuatProgres())
+        {
+            _playerProgress.SimpanProgres();            
+        }
+        
         NextLevel();
     }
 
@@ -30,18 +25,20 @@ public class LevelManager : MonoBehaviour
     {
         _indexSoal++;
 
-        if(_indexSoal >= _soalSoal.Length)
+        if(_indexSoal >= _soalSoal.BanyakLevel)
         {
             _indexSoal = 0;
         }
+           
+        LevelSoalKuis soal = _soalSoal.AmbilLevelKe(_indexSoal );
 
-        DataSoal soal = _soalSoal[_indexSoal ];
-        _tempatPertanyaan.SetPertanyaan(soal.pertanyaan, soal.hint, soal.judulLevel);
+        _tempatPertanyaan.SetPertanyaan($"Level {_indexSoal + 1}", soal.hint, soal.pertanyaan);
 
         for (int i = 0; i < _tempatPilihanJawaban.Length; i++)
         {
             UI_PoinJawaban poin = _tempatPilihanJawaban[i];
-            poin.SetPertanyaan(soal.jawabanTeks[i], soal.adalahBenar[i]);
+            LevelSoalKuis.OpsiJawaban opsi = soal.opsiJawaban[i];
+            poin.SetPertanyaan(opsi.jawabanTeks, opsi.adalahBenar);
         }
     }
 }

@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waktuJawab: 38
   _timeBar: {fileID: 1833724118}
-  _tempatPesan: {fileID: 0}
+  _tempatPesan: {fileID: 710245150}
 --- !u!1 &273736610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,34 +2819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d7e56be631ef5449f122d30b24e9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soalSoal:
-  - hint: {fileID: 21300000, guid: a96735cc17a2d4b4180ba10490b20d7f, type: 3}
-    pertanyaan: Apa warna dari mawar?
-    judulLevel: Level A-1
-    jawabanTeks:
-    - Merah
-    - Biru
-    - Hijau
-    - Kuning
-    adalahBenar: 01000000
-  - hint: {fileID: 21300000, guid: 5c8f5a1788d49dd4f80085c7260ab5ea, type: 3}
-    pertanyaan: Apa warna dari langit?
-    judulLevel: Level A-2
-    jawabanTeks:
-    - Merah
-    - Biru
-    - Hijau
-    - Kuning
-    adalahBenar: 00010000
-  - hint: {fileID: 21300000, guid: fb33c676fcb98a2429417c9097d0aa84, type: 3}
-    pertanyaan: Apa warna dari daun?
-    judulLevel: Level A-3
-    jawabanTeks:
-    - Merah
-    - Biru
-    - Hijau
-    - Kuning
-    adalahBenar: 00000100
+  _soalSoal: {fileID: 11400000, guid: e3ed5f41f66d9af46928494df0be0083, type: 2}
+  _playerProgress: {fileID: 11400000, guid: 92c53793b88e410409ee7811630602c5, type: 2}
   _tempatPertanyaan: {fileID: 945957792}
   _tempatPilihanJawaban:
   - {fileID: 2041016358}
