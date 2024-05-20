@@ -15,7 +15,7 @@ public class UI_Pertanyaan : MonoBehaviour
         Debug.Log("Start");
     }
 
-    public void SetPertanyaan(string teksPernyataan, Sprite gambarHint, string teksJudulLevel)
+    public void SetPertanyaan(string teksJudulLevel, Sprite gambarHint, string teksPernyataan)
     {
         _tempatTeks.text = teksPernyataan;
         _tempatGambar.sprite = gambarHint;

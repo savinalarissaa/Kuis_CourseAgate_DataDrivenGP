@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d843459ae81d540be8ad69b4e0a5e9, type: 3}
+  m_Name: Paket B
+  m_EditorClassIdentifier: 
+  _isiLevel:
+  - {fileID: 11400000, guid: fd33bcc24e14fb040b010adf8fc36367, type: 2}
+  - {fileID: 11400000, guid: 6c63d2d8fcaebc54783f737b7138a11b, type: 2}
+  - {fileID: 11400000, guid: f171349b323b13747baf5dabdf2edcea, type: 2}
+  - {fileID: 11400000, guid: af879a6eaae8111478f3184102f54490, type: 2}
+  - {fileID: 11400000, guid: 1f016285b99d627429fee41fce425efd, type: 2}
